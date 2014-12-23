@@ -58,7 +58,7 @@ function! grepany#grep(cmd, args)
     call s:args(a:args)
     let &grepprg = g:grepany_prg
     let &grepformat = g:grepany_format
-    silent execute a:cmd . " " . s:grepany_args
+    silent execute a:cmd . " " . escape(s:grepany_args, '|#%')
     call s:open(a:cmd)
     call s:mappings()
     execute "redraw!"
