@@ -91,6 +91,10 @@ g:grepany_mappings                                        *g:grepany_mappings*
 ==============================================================================
 LIMITATIONS                                              *grepany-limitations*
 
+Although the plugin tries to find the fastest grepping tool it's probably not
+as fast as using a dedicated plugin for a specific tool. If you're worried
+about speed, try `git-grep-vim`, `ack.vim` or `ag.vim`.
+
 The |:GrepFile| command will not work with either `git-grep` or `pt` due to
 various limitations. With `pt`, use the following command:
 
