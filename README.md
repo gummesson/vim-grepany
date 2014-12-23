@@ -45,7 +45,7 @@ git clone https://github.com/gummesson/vim-grepany ~/.vim/bundle
 ~~~
 
 For more commands, usage examples and configuration options, go check out the
-[documentation](doc/grepany.xt).
+[documentation](doc/grepany.txt).
 
 ## Mappings
 
