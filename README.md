@@ -52,19 +52,21 @@ For more commands, usage examples and configuration options, go check out the
 In the quickfix or location-list window, you can use the following mappings:
 
 ~~~ text
-o       Open file (same as <Enter>).
-O       Open file and close |quickfix| or |location-list| window.
-go      Preview file (open but maintain focus on the results).
-z       Open file and place the result in the middle of the screen.
+o       Open the file (same as <Enter>).
+O       Open the file and close the |quickfix| or |location-list|
+        window.
+go      Preview the file (open but maintain focus on the results).
+z       Open the file and place the result in the middle of the screen.
 Z       Open the file, place the result in the middle of the screen and
         close the |quickfix| or |location-list| window.
-gz      Preview file and place the result in the middle of the screen.
-t       Open in a new tab.
-T       Open in new tab silently.
-h       Open in horizontal split.
-H       Open in horizontal split silently.
-v       Open in vertical split.
-gv      Open in vertical split silently.
+gz      Preview the file and place the result in the middle of the
+        screen.
+t       Open the file in a new tab.
+T       Open the file in new tab silently.
+h       Open the file in horizontal split.
+H       Open the file in horizontal split silently.
+v       Open the file in vertical split.
+gv      Open the file in vertical split silently.
 q       Close the |quickfix| or |location-list| window.
 ~~~
 

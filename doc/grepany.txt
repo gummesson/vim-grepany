@@ -57,30 +57,32 @@ MAPPINGS                                                    *grepany-mappings*
 The following keyboard shortcuts are available in the |quickfix| and
 |location-list| window:
 
-o               Open file (same as <Enter>).
+o               Open the file (same as <Enter>).
 
-O               Open file and close |quickfix| or |location-list| window.
+O               Open the file and close the |quickfix| or |location-list|
+                window.
 
-go              Preview file (open but maintain focus on the results).
+go              Preview the file (open but maintain focus on the results).
 
-z               Open file and place the result in the middle of the screen.
+z               Open the file and place the result in the middle of the screen.
 
-Z               Open file, place the result in the middle of the screen and
-                close |quickfix| or |location-list| window.
+Z               Open the file, place the result in the middle of the screen and
+                close the |quickfix| or |location-list| window.
 
-gz              Preview file and place the result in the middle of the screen.
+gz              Preview the file and place the result in the middle of the
+                screen.
 
-t               Open in a new tab.
+t               Open the file in a new tab.
 
-T               Open in new tab silently.
+T               Open the file in new tab silently.
 
-h               Open in horizontal split.
+h               Open the file in horizontal split.
 
-H               Open in horizontal split silently.
+H               Open the file in horizontal split silently.
 
-v               Open in vertical split.
+v               Open the file in vertical split.
 
-gv              Open in vertical split silently.
+gv              Open the file in vertical split silently.
 
 q               Close the |quickfix| or |location-list| window.
 
