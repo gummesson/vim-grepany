@@ -12,6 +12,7 @@ let s:grepany_mappings = {
   \ "O":  "<CR><C-W>p<C-W>c",
   \ "go": "<CR><C-W>p",
   \ "z":  "<CR>zz",
+  \ "Z":  "<CR>zz<C-W>p<C-W>c",
   \ "gz": "<CR>zz<C-W>p",
   \ "h":  "<C-W><CR><C-W>K",
   \ "H":  "<C-W><CR><C-W>K<C-W>b",

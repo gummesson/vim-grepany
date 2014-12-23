@@ -56,6 +56,8 @@ o       Open file (same as <Enter>).
 O       Open file and close |quickfix| or |location-list| window.
 go      Preview file (open but maintain focus on the results).
 z       Open file and place the result in the middle of the screen.
+Z       Open the file, place the result in the middle of the screen and
+        close the |quickfix| or |location-list| window.
 gz      Preview file and place the result in the middle of the screen.
 t       Open in a new tab.
 T       Open in new tab silently.
