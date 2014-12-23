@@ -55,6 +55,8 @@ In the quickfix or location-list window, you can use the following mappings:
 o       Open file (same as <Enter>).
 O       Open file and close |quickfix| or |location-list| window.
 go      Preview file (open but maintain focus on the results).
+z       Open file and place the result in the middle of the screen.
+gz      Preview file and place the result in the middle of the screen.
 t       Open in a new tab.
 T       Open in new tab silently.
 h       Open in horizontal split.
