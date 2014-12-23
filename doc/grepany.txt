@@ -1,0 +1,101 @@
+*grepany.txt*                                             `grep` with any tool
+
+==============================================================================
+INTRODUCTION                                  *grepany* *grepany-introduction*
+
+`grepany` finds and runs any grepping tool in Vim and shows the results in
+a split window.
+
+The plugin finds the tool by going from the fastest to the slowest (according
+to benchmarks):
+
+1. `git-grep`
+2. `pt`
+3. `ag`
+4. `ack`
+5. `grep`
+
+==============================================================================
+USAGE                                                          *grepany-usage*
+
+:Grep[!] [options] {pattern} [{directory}]                             *:Grep*
+
+    Search recursively in {directory} (which defaults to the current
+    directory) for the {pattern}.  Behaves just like the |:grep| command, but
+    will open the |quickfix| window for you. If [!] is not given the first
+    occurrence is jumped to.
+
+:GrepAdd [options] {pattern} [{directory}]                          *:GrepAdd*
+
+    Just like |:Grep|, but instead of making a new list, the matches are
+    appended to the current |quickfix| list.
+
+:LGrep [options] {pattern} [{directory}]                              *:LGrep*
+
+    Just like |:Grep| but instead of the |quickfix| list, matches are placed
+    in the current |location-list|.
+
+:LGrepAdd [options] {pattern} [{directory}]                        *:LGrepAdd*
+
+    Just like |:GrepAdd| but instead of the |quickfix| list, matches are added
+    to the current |location-list|.
+
+:GrepFile [options] {pattern} [{directory}]                        *:GrepFile*
+
+    Search recursively in {directory} (which defaults to the current
+    directory) for filenames matching the {pattern}.  Behaves just like the
+    |:grep| command, but will open the |quickfix| window for you.
+
+Files containing the search term will be listed in the split window, along
+with the line number of the occurrence, once for each occurrence. Pressing
+<Enter> on a line in this window will open the file, and place the cursor on
+the matching line.
+
+==============================================================================
+MAPPINGS                                                    *grepany-mappings*
+
+The following keyboard shortcuts are available in the |quickfix| and
+|location-list| window:
+
+o               Open file (same as <Enter>).
+
+O               Open file and close |quickfix| or |location-list| window.
+
+go              Preview file (open but maintain focus on the results).
+
+t               Open in a new tab.
+
+T               Open in new tab silently.
+
+h               Open in horizontal split.
+
+H               Open in horizontal split silently.
+
+v               Open in vertical split.
+
+gv              Open in vertical split silently.
+
+q               Close the |quickfix| or |location-list| window.
+
+==============================================================================
+CONFIGURATION                                          *grepany-configuration*
+
+g:grepany_mappings                                        *g:grepany_mappings*
+
+    Define additional mappings for the |quickfix| and |location-list| window.
+
+>
+    let g:grepany_mappings = { "<Esc>":  "<C-W>c" }
+<
+
+==============================================================================
+LIMITATIONS                                              *grepany-limitations*
+
+The |:GrepFile| command will not work with either `git-grep` or `pt` due to
+various limitations. With `pt`, use the following command:
+
+>
+    :Grep -g {pattern}
+<
+
+vim:ft=help:tw=78:sw=4:ts=4:norl:
