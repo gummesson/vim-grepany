@@ -1,3 +1,26 @@
+let g:grepany_format = "%f:%l:%c:%m,%f:%l:%m,%f"
+
+let s:grepany_mappings = {
+  \ "t":  "<C-W><CR><C-W>T",
+  \ "T":  "<C-W><CR><C-W>TgT<C-W>j",
+  \ "o":  "<CR>",
+  \ "O":  "<CR><C-W>p<C-W>c",
+  \ "go": "<CR><C-W>p",
+  \ "z":  "<CR>zz",
+  \ "Z":  "<CR><C-W>p<C-W>czz",
+  \ "gz": "<CR>zz<C-W>p",
+  \ "h":  "<C-W><CR><C-W>K",
+  \ "H":  "<C-W><CR><C-W>K<C-W>b",
+  \ "v":  "<C-W><CR><C-W>H<C-W>b<C-W>J<C-W>t",
+  \ "gv": "<C-W><CR><C-W>H<C-W>b<C-W>J",
+  \ "q":  "<C-W>c" }
+
+if exists("g:grepany_mappings")
+  let g:grepany_mappings = extend(s:grepany_mappings, g:grepany_mappings)
+else
+  let g:grepany_mappings = s:grepany_mappings
+endif
+
 function! s:git_grep()
   if system("git rev-parse --is-inside-work-tree") =~# "true"
     return 1
