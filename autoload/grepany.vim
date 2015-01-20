@@ -59,9 +59,9 @@ endfunction
 
 function! s:open(cmd)
   if a:cmd =~# "^l"
-    execute "lopen"
+    execute "lwindow"
   else
-    execute "copen"
+    execute "cwindow"
   endif
 endfunction
 
